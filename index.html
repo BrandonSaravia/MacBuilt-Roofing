@@ -26,10 +26,10 @@
 
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">About us</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Contact us</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Log in</a></li>
+                <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
+                <li class="navigation__item"><a href="about.html" class="navigation__link">About us</a></li>
+                <li class="navigation__item"><a href="index.html" onclick="scrollToId('contact');return false;" class="navigation__link">Contact us</a></li>
+                <li class="navigation__item"><a href="login.html" class="navigation__link">Log in</a></li>
             </ul>
         </nav>
     </div>
@@ -44,7 +44,7 @@
                 <span class="heading-primary--sub">licenced in the Carolinas and Georgia</span>
             </h1>
 
-            <a href="#" class="btn btn--white btn--animated">Contact us</a>
+            <a href="" onclick="scrollToId('contact');return false;" class="btn btn--white btn--animated">Contact us</a>
         </div>
 
     </header>
@@ -179,7 +179,7 @@
                 </h2>
             </div>
 
-            <form class="form" data-netlify="true" data-netlify-recaptcha="true" method="POST" action=''>
+            <form class="form" data-netlify="true" data-netlify-recaptcha="true" method="POST">
                 <div class="form__container">
 
                     <label for="name" class="form__label">Name</label>
@@ -191,7 +191,7 @@
                     <label for="message" class="form__label">Message</label>
                     <textarea class="form__input form__input--message" name="message" placeholder="Message" rows="7" required ></textarea>
 
-                    <div class="form__recaptcha" data-netlify-recaptcha="true"></div>
+                    <div class="form__recaptcha" data-netlify-recaptcha="true" aria-required="true"></div>
 
                     <button class="btn-form" type="submit">Submit</button>
                 </div>
@@ -206,6 +206,16 @@
             <span class="footer__copyright-name">MacBuilt Construction LLC</span> 
         </div>
     </footer>
+
+    <script>
+        function scrollToId(id) {
+            let section = document.getElementById(id);
+
+            section.scrollIntoView(true);
+
+            document.getElementById("navi-toggle").checked = false;
+        }
+    </script>
 
 </body>
 
