@@ -1,0 +1,18 @@
+.composition {
+    max-width: 1300px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        width: 100%;
+        max-width: 425px;
+        margin-bottom: 10rem;
+    }
+
+    &__logo {
+        margin: 0 auto;
+    }
+}

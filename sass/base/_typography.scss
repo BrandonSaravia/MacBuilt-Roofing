@@ -30,27 +30,30 @@ body {
 }
 
 .heading-secondary {
-    font-size: 3.5rem;
+    font-size: 4.25rem;
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
-    background-image: linear-gradient(to right, $color-gray-dark, $blue-dark);
+    background-image: linear-gradient(to right, $color-gray-dark, $color-gray);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
 
-    @include respond(tab-port) {
-        font-size: 3rem;
-    }
-
-    @include respond(phone) {
-        font-size: 2.5rem;
+    &--white {
+        color: #C1272D;
     }
 
     &:hover {
-        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        transform: scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     }
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2rem;
 }

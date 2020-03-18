@@ -81,7 +81,7 @@ body {
       margin-bottom: .25rem; }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 4.25rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -91,15 +91,17 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .2s; }
-  @media only screen and (max-width: 56.25em) {
-    .heading-secondary {
-      font-size: 3rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .heading-secondary {
-      font-size: 2.5rem; } }
+  .heading-secondary--white {
+    color: #C1272D; }
   .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    transform: scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.sub-heading {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .2rem; }
 
 .u-center-text {
   text-align: center; }
@@ -107,8 +109,17 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
 
+.u-margin-bottom-meduim {
+  margin-bottom: 6rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 4rem; }
+
 .u-margin-top-small {
   margin-top: 4rem; }
+
+.u-padding-top-large {
+  padding-top: 8rem; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -153,6 +164,47 @@ body {
   z-index: -1;
   transition: all .4s; }
 
+.card {
+  max-width: 325px;
+  width: 100%; }
+  .card--1 {
+    margin-right: 20%; }
+  .card--2 {
+    margin-left: 20%; }
+  .card__picture--1 {
+    background-image: url(); }
+  .card__picture--2 {
+    background-image: url(); }
+  .card__heading {
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to right, transparent 1%, lightgray 10%, gray, lightgray 90%, transparent 99%);
+    border-image-slice: 1;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem; }
+    .card__heading-span {
+      font-size: 3.25rem;
+      font-weight: bold; }
+  .card__details {
+    text-align: center;
+    line-height: 7rem; }
+  .card__item {
+    font-size: 2rem; }
+
+.composition {
+  max-width: 1300px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  justify-content: center; }
+  .composition__container {
+    display: flex;
+    width: 100%;
+    max-width: 425px;
+    margin-bottom: 10rem; }
+  .composition__logo {
+    margin: 0 auto; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(190, 186, 186, 0.9), rgba(169, 169, 169, 0.9)), url("../../img/landing-page/shingles.jpg");
@@ -188,7 +240,7 @@ body {
   right: 6rem;
   border-radius: 50%;
   z-index: 2000;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
   text-align: center;
   cursor: pointer; }
   @media only screen and (max-width: 56.25em) {
@@ -228,6 +280,8 @@ body {
   opacity: 0;
   width: 0;
   transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .navigation__nav > * {
+    display: none; }
 
 .navigation__list {
   position: absolute;
@@ -248,11 +302,11 @@ body {
   padding: 1rem 2rem;
   color: #fff;
   text-decoration: none;
-  width: 25%;
+  width: 33%;
   text-transform: uppercase;
   background-image: linear-gradient(110deg, transparent 0%, transparent 50%, #fff 50%);
   background-size: 220%;
-  transition: all .4s; }
+  transition: all .3s; }
   .navigation__link:link span, .navigation__link:visited span {
     margin-right: 1.5rem;
     display: inline-block; }
@@ -268,6 +322,8 @@ body {
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%; }
+  .navigation__checkbox:checked ~ .navigation__nav > * {
+    display: initial; }
 
 .navigation__icon {
   position: relative;
@@ -303,3 +359,29 @@ body {
 .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
   top: 0;
   transform: rotate(-135deg); }
+
+.section-about {
+  margin: 0 0 4rem 0; }
+  .section-about__container {
+    display: flex;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(to right, transparent 10%, lightgray 30%, gray, lightgray 70%, transparent 90%);
+    border-image-slice: 1;
+    margin-bottom: 15rem; }
+    .section-about__container-left {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%; }
+    .section-about__container-right {
+      display: flex;
+      justify-content: flex-start;
+      width: 50%;
+      border-left: 3px solid transparent;
+      border-image: linear-gradient(to bottom, gray, lightgray 70%, transparent 98%);
+      border-image-slice: 1; }
+
+.section-refrences {
+  margin: 0 0 6rem 0; }
+
+.section-contact {
+  background-color: #bebaba; }
