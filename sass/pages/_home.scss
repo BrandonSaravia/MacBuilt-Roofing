@@ -1,12 +1,12 @@
 .section-about {
-    margin: 0 0 4rem 0;
+    padding: 7.5rem 0 4rem 0;
     
     &__container {
         display: flex;
         border-top: 3px solid transparent;
         border-image: linear-gradient(to right, transparent 10%, lightgray 30%, gray, lightgray 70%, transparent 90%);
         border-image-slice: 1;
-        margin-bottom: 15rem;
+        margin-bottom: 10rem;
         
         &-left {
             display: flex;
@@ -25,9 +25,10 @@
 }
 
 .section-refrences {
-    margin: 0 0 6rem 0;
+    margin: 0 0 10rem 0;
 }
 
 .section-contact {
     background-color: $color-light-gray;
+    padding-bottom: 15.5rem;
 }
