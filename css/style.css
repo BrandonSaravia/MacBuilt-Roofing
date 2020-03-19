@@ -53,8 +53,7 @@ table {
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%;
-  scroll-behavior: smooth; }
+  font-size: 62.5%; }
 
 body {
   box-sizing: border-box;
@@ -302,7 +301,8 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
     top: 4rem;
