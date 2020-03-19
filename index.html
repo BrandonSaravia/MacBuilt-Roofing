@@ -222,8 +222,16 @@
 
         function scrollToId(id) {
             let section = document.getElementById(id);
+            let length = 0
+            
+            if (id === "contact") {
+                length = .125 * section.offsetHeight;
+            } else {
+                length = 0
+            }
 
-            let targetLocation = getPageDistance(section);
+            let targetLocation = getPageDistance(section) + length;
+
             let startLocation = window.pageYOffset;
 
             let distance = targetLocation - startLocation;
