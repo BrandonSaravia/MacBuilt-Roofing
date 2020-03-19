@@ -223,16 +223,34 @@
         function scrollToId(id) {
             let section = document.getElementById(id);
 
-            let location = getPageDistance(section);
+            let targetLocation = getPageDistance(section);
+            let startLocation = window.pageYOffset;
 
-            console.log(location)
-            window.scroll({
-                top: location,
-                behavior: 'smooth'
-            });
+            let distance = targetLocation - startLocation;
+            let duration = 1000;
+
+            let start = null;
+
+            function step(timestamp){
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                // window.scrollTo(0, distance*(progress/duration) + startLocation);
+                window.scrollTo(0, easeInOutQuad(progress, startLocation, distance, duration));
+                if (progress < duration) window.requestAnimationFrame(step);
+            }
+
+            window.requestAnimationFrame(step);
 
             document.getElementById("navi-toggle").checked = false;
         }
+
+
+        function easeInOutQuad(t, b, c, d) {
+            t /= d/2;
+            if (t < 1) return c/2*t*t + b;
+            t--;
+            return -c/2 * (t*(t-2) - 1) + b;
+        };
     </script>
 
 </body>
