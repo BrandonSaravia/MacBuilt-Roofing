@@ -143,31 +143,35 @@
                     <img src="./img/landing-page/clients/100east.png" alt="" class="composition__logo">
                 </div>
 
-                <div class="composition__container">
+                <div class="composition__container composition__2ndHalf">
                     <img src="./img/landing-page/clients/millenium2.png" alt="" class="composition__logo">
                 </div>
 
-                <div class="composition__container">
+                <div class="composition__container composition__2ndHalf">
                     <img src="./img/landing-page/clients/chatsworth.png" alt="" class="composition__logo">
                 </div>
 
-                <div class="composition__container">
+                <div class="composition__container composition__2ndHalf">
                     <img src="./img/landing-page/clients/falls.png" alt="" class="composition__logo">
                 </div>
 
-                <div class="composition__container">
+                <div class="composition__container composition__2ndHalf">
                     <img src="./img/landing-page/clients/legends-sandy.png" alt="" class="composition__logo">
                 </div>
 
-                <div class="composition__container">
+                <div class="composition__container composition__2ndHalf">
                     <img src="./img/landing-page/clients/vinings.png" alt="" class="composition__logo">
                 </div>
 
-                <div class="composition__container">
+                <div class="composition__container composition__2ndHalf">
                     <img src="./img/landing-page/clients/atlantic.png" alt="" class="composition__logo">
                 </div>
             </div>
 
+            <div class="composition__button">
+                <button class="toggle-btn u-margin-0-auto" id="show-logos-button" onclick="toggleLogos()">view more</button>
+            </div>
+            
         </section>
 
 
@@ -207,6 +211,7 @@
         </div>
     </footer>
 
+    <!-- page scrolling funcs -->
     <script>
 
         function getPageDistance(elem) {
@@ -261,6 +266,97 @@
         };
     </script>
 
+    <!-- toggle visable logos -->
+    <script>
+        let showLogos = true;
+        let toggleButton = document.getElementById("show-logos-button"); 
+        let logos = document.querySelectorAll(".composition__2ndHalf");
+        let width = document.body.clientWidth;
+        let screenWidth = "";
+
+        // check starting screen width
+        if (width <= 900) {
+
+            screenWidth = 'narrow';
+
+        } else {
+
+            screenWidth = 'wide';
+            toggleButton.classList.add("u-display-none");
+
+        }
+
+
+        function toggleLogos() {
+            if (showLogos === true) {
+                // show logos
+
+                logos.forEach(elem => {
+                    elem.classList.remove('u-display-none');
+                    elem.classList.add('u-display-flex');
+                })
+
+                showLogos = false;
+
+                toggleButton.textContent = "view less";
+
+            } else {
+                // hide logos
+
+                logos.forEach(elem => {
+                    elem.classList.add('u-display-none');
+                    elem.classList.remove('u-display-flex');
+                })
+
+                showLogos = true;
+
+                toggleButton.textContent = "view more";
+
+            }
+        }
+
+
+        window.addEventListener("resize", () => {
+            
+            width = document.body.clientWidth;
+
+            if (width <= 900 && screenWidth === 'wide') {
+                console.log('passed')
+            
+                logos.forEach(elem => {
+                    elem.classList.add('u-display-none');
+                    elem.classList.remove('u-display-flex');
+                })
+            
+                showLogos = true;
+
+                toggleButton.textContent = "view more";
+                toggleButton.classList.remove("u-display-none");
+
+                screenWidth = 'narrow';
+            
+            } else if (width > 900 && screenWidth === 'narrow') {
+            
+                logos.forEach(elem => {
+                    elem.classList.remove('u-display-none');
+                    elem.classList.add('u-display-flex');
+                })
+            
+                showLogos = false;
+
+                toggleButton.textContent = "view less";
+                toggleButton.classList.add("u-display-none");
+
+                screenWidth = 'wide';
+            
+            } else {
+
+                console.log("bad resize");
+            
+            }
+        })
+
+    </script>
 </body>
 
 </html>
