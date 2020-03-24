@@ -62,7 +62,7 @@ html {
       font-size: 45%; } }
   @media only screen and (max-width: 56.25em) {
     html {
-      font-size: 35%; } }
+      font-size: 40%; } }
 
 body {
   box-sizing: border-box;
@@ -78,14 +78,37 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem; }
+  @media only screen and (max-width: 40em) {
+    .heading-primary {
+      line-height: 4; } }
   .heading-primary--main {
     display: block;
     font-size: 6rem;
     letter-spacing: 3.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--main {
+        letter-spacing: 2.5rem; } }
+    @media only screen and (max-width: 40em) {
+      .heading-primary--main {
+        line-height: 1.2; } }
+    @media only screen and (max-width: 20em) {
+      .heading-primary--main {
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     letter-spacing: 1.75rem; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--sub {
+        font-size: 2rem;
+        letter-spacing: .75rem; } }
+    @media only screen and (max-width: 28.125em) {
+      .heading-primary--sub {
+        line-height: 2;
+        margin-top: 2rem; } }
+    @media only screen and (max-width: 20em) {
+      .heading-primary--sub {
+        font-size: 1.5rem; } }
     .heading-primary--sub:not(:last-child) {
       margin-bottom: .25rem; }
 
@@ -355,6 +378,9 @@ body {
     left: 4rem; }
   .header__logo {
     height: 12rem; }
+    @media only screen and (max-width: 20em) {
+      .header__logo {
+        height: 10rem; } }
   .header__text-box {
     position: absolute;
     top: 45%;
@@ -384,7 +410,7 @@ body {
     .navigation__button {
       top: 4rem;
       right: 4rem; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 40em) {
     .navigation__button {
       top: 3rem;
       right: 3rem; } }
@@ -403,7 +429,7 @@ body {
     .navigation__background {
       top: 4.5rem;
       right: 4.5rem; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 40em) {
     .navigation__background {
       top: 3.5rem;
       right: 3.5rem; } }
