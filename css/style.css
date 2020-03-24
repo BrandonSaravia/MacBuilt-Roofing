@@ -68,11 +68,12 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
   font-weight: 400;
-  line-height: 1.7;
-  padding: 3rem 3rem 0 3rem; }
+  line-height: 1.7; }
   @media only screen and (max-width: 75em) {
     body {
       padding: 0; } }
+  body::-webkit-scrollbar {
+    display: none; }
 
 .heading-primary {
   color: #fff;
@@ -231,6 +232,12 @@ body {
   border: 0;
   background-color: #C1272D;
   font-size: 1.9rem; }
+  @media only screen and (max-width: 93.75em) {
+    .btn-form, .btn-form:link, .btn-form:visited {
+      margin-top: -17rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .btn-form, .btn-form:link, .btn-form:visited {
+      margin-top: -19rem; } }
 
 .toggle-btn {
   text-transform: capitalize;
@@ -315,6 +322,9 @@ body {
     color: #2b2b2b;
     display: block;
     transition: all .3s; }
+    @media only screen and (max-width: 93.75em) {
+      .form__label {
+        font-size: 2.7rem; } }
   .form__input {
     width: 100%;
     display: block;
@@ -324,6 +334,9 @@ body {
     color: #2b2b2b;
     background-color: #fff;
     border: none; }
+    @media only screen and (max-width: 93.75em) {
+      .form__input {
+        font-size: 2.45rem; } }
     .form__input::placeholder {
       color: rgba(43, 43, 43, 0.6); }
     .form__input:focus {
@@ -333,6 +346,9 @@ body {
     .form__input--message {
       font-size: 2rem;
       text-decoration: none; }
+      @media only screen and (max-width: 93.75em) {
+        .form__input--message {
+          font-size: 3rem; } }
   .form__recaptcha {
     margin-top: 9rem;
     align-self: flex-end; }
