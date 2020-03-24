@@ -9,5 +9,4 @@
 <img src="./img/coding-logos/npm-Logo.png" alt="NPM Logo" width="100px" />
 
 ### **Styling Structure**
-* made using a float layout
-* SASS styling written in a 7-1 pattern
+* SASS styling written in a 7-1 folder structure
