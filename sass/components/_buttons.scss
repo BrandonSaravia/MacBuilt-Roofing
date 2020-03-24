@@ -73,5 +73,14 @@
         background-color: #C1272D;
         font-size: 1.9rem;
     }
-    
+}
+
+.toggle-btn {
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 3rem;
+    height: 7rem;
+    width: 60%;
+    background-color: $color-white;
+    border: 1px solid black;
 }

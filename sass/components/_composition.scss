@@ -10,9 +10,27 @@
         width: 100%;
         max-width: 425px;
         margin-bottom: 10rem;
+
+        @include respond(small-desktop) {
+            max-width: 330px;
+        }
     }
 
     &__logo {
         margin: 0 auto;
+    }
+
+    &__2ndHalf {
+        display: inherit;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__button {
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
 }

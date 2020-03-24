@@ -7,11 +7,19 @@
         border-image: linear-gradient(to right, transparent 10%, lightgray 30%, gray, lightgray 70%, transparent 90%);
         border-image-slice: 1;
         margin-bottom: 10rem;
+        @include respond(tab-port) {
+            flex-flow: column;
+        }
         
         &-left {
             display: flex;
             justify-content: flex-end;
             width: 50%;
+            @include respond(tab-port) {
+                justify-content: center;
+                width: 100%;   
+                margin: 3rem 0;         
+            }
         }
         &-right {
             display: flex;
@@ -20,6 +28,15 @@
             border-left: 3px solid;
             border-image: linear-gradient(to bottom, gray, lightgray 70%, transparent 98%);
             border-image-slice: 1;
+            @include respond(tab-port) {
+                justify-content: center;
+                width: 100%;   
+                border-top: 3px solid;
+                border-left: none;  
+                border-image: linear-gradient(to right, transparent 10%, lightgray 30%, gray, lightgray 70%, transparent 90%);     
+                border-image-slice: 1;
+                margin: 3rem 0;
+            }
         }
     }
 }
